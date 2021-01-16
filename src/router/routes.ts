@@ -1,10 +1,11 @@
-import {AuthPage} from "../pages/auth";
+import {UnAuthLayout} from "../layouts/unAuth";
+import {AuthLayout} from "../layouts/auth";
 
 export const AuthRoutes = [
     {
         exact: false,
         path: '/',
-        component: null
+        component: AuthLayout
     }
 ];
 
@@ -12,6 +13,6 @@ export const UnAuthRoutes = [
     {
         exact: false,
         path: '/',
-        component: AuthPage
+        component: UnAuthLayout
     }
 ];

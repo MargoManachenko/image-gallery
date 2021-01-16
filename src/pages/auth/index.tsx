@@ -1,5 +1,18 @@
-import React from 'react';
+import React, {useCallback} from 'react';
+import {Button, Typography} from "@material-ui/core";
+import {authUser} from "../../store/auth/auth.thunk";
+import {useDispatch} from "react-redux";
+import {apiKey} from "../../api/auth";
 
-export const AuthPage = () => {
-    return <div></div>
+export const LogIn: React.FC = () => {
+    const dispatch = useDispatch();
+
+    const logIn = useCallback(() => {
+        dispatch(authUser({apiKey: apiKey}))
+    }, [dispatch]);
+
+    return <div>
+        <Typography>You are not logged in</Typography>
+        <Button variant="contained" color="primary" onClick={logIn}>Log In</Button>
+    </div>;
 };
