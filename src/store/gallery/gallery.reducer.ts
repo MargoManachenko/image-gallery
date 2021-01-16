@@ -26,7 +26,7 @@ export function galleryReducer(state = initialState, action: TGalleryActions): G
         case getType(getImages.success): {
             return {
                 ...state,
-                loadingPicturesList: true,
+                loadingPicturesList: false,
                 hasMore: action.payload.hasMore,
                 pageCount: action.payload.pageCount,
                 pictures: action.payload.pictures,

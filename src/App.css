@@ -6,3 +6,9 @@
 .gallery-img {
     cursor: pointer;
 }
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 36px 0;
+}

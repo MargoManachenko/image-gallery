@@ -12,7 +12,7 @@ export const PictureItem: React.FC<IProps> = ({picture}) => {
 
     const goToPictureInfo = useCallback(() => {
         history.push(`/img/${picture.id}`)
-    }, [history]);
+    }, [history, picture]);
 
     return <img className={'gallery-img'} src={picture.cropped_picture} alt="" onClick={goToPictureInfo}/>
 };

@@ -25,6 +25,6 @@ export const getImage = createAsyncAction(
     ActionNames.GET_CURRENT_IMAGE_FAILED
 )<undefined, PictureModel, Error>();
 
-export const increasePageNumberImages = createAction(ActionNames.SET_PAGE_NUMBER_IMAGES)<number>();
+export const setPageNumberImages = createAction(ActionNames.SET_PAGE_NUMBER_IMAGES)<number>();
 
-export type TGalleryActions = ActionType<typeof getImages | typeof increasePageNumberImages | typeof getImage>
+export type TGalleryActions = ActionType<typeof getImages | typeof setPageNumberImages | typeof getImage>
