@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import {getCurrentImage} from "../../store/gallery/gallery.thunk";
 import {useDispatch} from "react-redux";
 import {useReduxState} from "../../helpers/use-redux-state";
+import {Loader} from "../../shared/loader";
 
 export const PictureInfo = () => {
     const {gallery: {currentPicture, loadingCurrentPicture}} = useReduxState();
@@ -19,7 +20,8 @@ export const PictureInfo = () => {
     }, [loadingCurrentPicture, currentPicture, id]);
 
     return <div className={'wrapper'}>
-        {currentPicture &&
+        {isLoading && <Loader/>}
+        {currentPicture && !isLoading &&
         <div>
             <img src={currentPicture.full_picture} alt=""/>
             <div>

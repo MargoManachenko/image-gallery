@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {useReduxState} from "../../helpers/use-redux-state";
 import {PictureItem} from "./pictureItem";
 import {Grid} from "@material-ui/core";
+import {Loader} from "../../shared/loader";
 
 export const ImageGallery = () => {
 
@@ -18,6 +19,7 @@ export const ImageGallery = () => {
         <h2>
             Image Gallery
         </h2>
+        {loadingPicturesList && <Loader/>}
         <Grid
             container justify="center" spacing={4}
         >
