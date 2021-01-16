@@ -10,7 +10,7 @@ export const Pages = [
     },
 ];
 
-export const AuthLayout: React.FC = () => {
+export const AuthLayout = () => {
     return <Switch>
         {Pages.map((route, index) => (
             <Route key={index} exact={route.exact} path={route.path} component={route.component}/>

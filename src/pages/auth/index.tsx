@@ -4,7 +4,7 @@ import {authUser} from "../../store/auth/auth.thunk";
 import {useDispatch} from "react-redux";
 import {apiKey} from "../../api/auth";
 
-export const LogIn: React.FC = () => {
+export const LogIn = () => {
     const dispatch = useDispatch();
 
     const logIn = useCallback(() => {
